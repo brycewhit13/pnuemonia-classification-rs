@@ -1,0 +1,24 @@
+name: Rust CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          components: clippy, rustfmt
+          override: true
+      - name: Formatting
+        run: make format
+      - name: Linting
+        run: make lint
+      - name: Testing
+        run: make test  
+      - name: Build Release
+        run: make release
