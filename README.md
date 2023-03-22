@@ -62,6 +62,6 @@ The python notebooks deployed to AWS Sagemaker Studio can also be found in the n
 If you are running into permission issues, please reach out to brycewhit13@gmail.com. 
 
 ## Running from Docker
-
+You can find the docker container [here](https://hub.docker.com/repository/docker/brycewhit13/pnuemonia-classification-rs/general). To run from docker, use the following commands:
 1. `docker pull brycewhit13/pnuemonia-classification-rs`
 2. `docker run pnuemonia-classification-rs`
