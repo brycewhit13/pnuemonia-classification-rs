@@ -93,13 +93,14 @@ pub fn combine_data(
     combined.append(pneumonia);
 
     // generate the labels
+    let mut labels_negative = vec![0; num_neg_class];
+    let mut labels_positive = vec![1; num_pos_class];
+
+    // combine the labels into a single vector
     let mut labels = Vec::new();
-    for _ in 0..num_neg_class {
-        labels.push(0);
-    }
-    for _ in 0..num_pos_class {
-        labels.push(1);
-    }
+    labels.append(&mut labels_negative);
+    labels.append(&mut labels_positive);
+
     let labels = Tensor::of_slice(&labels);
 
     // return the combined vector and associated labels

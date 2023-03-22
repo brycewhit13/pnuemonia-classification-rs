@@ -1,8 +1,6 @@
 use pnuemonia_classification_rs::{
-    combine_data, get_aws_client, load_data, test_model, train_model
+    combine_data, get_aws_client, load_data, test_model, train_model,
 };
-use tokio;
-
 const NUM_EPOCHS: i32 = 1;
 
 #[tokio::main]
