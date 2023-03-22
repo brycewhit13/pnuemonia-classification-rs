@@ -1,5 +1,5 @@
 use pnuemonia_classification_rs::{
-    combine_data, get_aws_client, load_data, test_model, train_model,
+    combine_data, get_aws_client, load_data, test_model, train_model
 };
 use tokio;
 
@@ -24,7 +24,7 @@ async fn main() {
         num_pneumonia_val,
     );
 
-    //println!("Loading the test data...");
+    println!("Loading the test data...");
     let mut normal_test = load_data(client.clone(), "chest_xrays/val/NORMAL").await;
     let mut pneumonia_test = load_data(client.clone(), "chest_xrays/val/PNEUMONIA").await;
     let num_normal_test = normal_test.len();
@@ -36,8 +36,6 @@ async fn main() {
         num_normal_test,
         num_pneumonia_test,
     );
-
-    //pnuemonia_classification_rs::_print_image_sizes(&val_images);
 
     // Instantiate and train the model
     println!("Training the model...");
