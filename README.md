@@ -60,3 +60,8 @@ The python notebooks deployed to AWS Sagemaker Studio can also be found in the n
 - To perform testing, run the `notebooks/test_classifier.ipynb` notebook
 
 If you are running into permission issues, please reach out to brycewhit13@gmail.com. 
+
+## Running from Docker
+
+1. `docker pull brycewhit13/pnuemonia-classification-rs`
+2. `docker run pnuemonia-classification-rs`
