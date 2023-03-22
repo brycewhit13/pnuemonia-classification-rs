@@ -65,3 +65,5 @@ If you are running into permission issues, please reach out to brycewhit13@gmail
 You can find the docker container [here](https://hub.docker.com/repository/docker/brycewhit13/pnuemonia-classification-rs/general). To run from docker, use the following commands:
 1. `docker pull brycewhit13/pnuemonia-classification-rs`
 2. `docker run pnuemonia-classification-rs`
+
+NOTE: This was developed on Windows and does reference some enironment variables, so it may not work on a different system or without the variables defined. I have not been able to test this out, but please reach out if you try and it doesn't work!
